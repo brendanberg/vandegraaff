@@ -1,0 +1,9 @@
+{
+	"directories": {
+		"output": "output",
+		"static": "static",
+		"data": "data",
+		"templates": "templates",
+		"filters": "user-filters"
+	}
+}

@@ -1,0 +1,32 @@
+{
+  "name": "Van de Graaff",
+  "description": "a static (website) generator written in JavaScript",
+  "version": "0.1.0",
+  "author": "Brendan Berg and Ramsey Nasser",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brendanberg/vandegraaff.git"
+  },
+  "contributors": [
+    {
+      "name": "Brendan Berg",
+      "email": "brendan@plusminusfive.com"
+    },
+    {
+      "name": "Ramsey Nasser",
+      "email": "ram@nas.sr"
+    }
+  ],
+  "devDependencies": {
+    "JSONSelect": "~0.4.0",
+    "fs-extra": "~0.8.1",
+    "grunt": "^0.4.5",
+    "grunt-aws-s3": "^0.9.1",
+    "grunt-exec": "^0.4.6",
+    "grunt-prompt": "^1.1.0",
+    "js-yaml": "~3.1.0",
+    "marked": "~0.3.2",
+    "mustache": "~0.8.1",
+    "sugar": "~1.4.1"
+  }
+}
