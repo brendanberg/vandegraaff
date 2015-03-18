@@ -3,6 +3,7 @@
   "description": "a static (website) generator written in JavaScript",
   "version": "0.1.0",
   "author": "Brendan Berg and Ramsey Nasser",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/brendanberg/vandegraaff.git"
