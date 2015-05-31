@@ -63,4 +63,3 @@ for (var i in routes) {
 	var ctx = {route: route};
 	filters['pipeline'].apply(ctx, routes[i].slice(1));
 }
-
