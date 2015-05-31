@@ -4,14 +4,15 @@ module.exports = function () {
 	// TODO: This is not quite the same as pipeline() due to the initial value
 	// (`it`) provided to the reduce function.
 	return function(items) {
+		var ctx = this;
 		return items.map(function(it) {
 			return args.reduce(function(previous, current) {
 				if (current.name === 'join') {
 					return [previous];
 				} else if (previous && previous.map) {
-					return previous.map(function(p) { return current(p) });
+					return previous.map(function(p) { return current.call(ctx, p) });
 				} else {
-					return current(previous);
+					return current.call(ctx, previous);
 				}
 			}, it);
 		});
