@@ -59,3 +59,4 @@ basic filter operations.
 ## Who Uses Van de Graaff
 
 - [Eyebeam Art + Technology Center](http://eyebeam.org/)
+- [Berg Industries](http://berg.industries/)
