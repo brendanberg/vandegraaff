@@ -5,6 +5,12 @@ and return a data value.
 Depending on whether the returned item is a scalar value or a list determines
 the behavior of the subsequent filters in the pipeline.
 
+Some filters take arguments when specified in a pipeline.
+For example, the `group` filter takes a parameter that defines the key on
+which to group a list of objects. These parameters are specified as arguments
+to a function call. Other filters that take no arguments must not be followed
+by parenthesized arguments.
+
 If a filter returns a scalar value, the next filter in the pipeline is called
 with the previous filter's result as input.
 When a filter returns a list, each item in the list is passed through the rest
@@ -28,6 +34,49 @@ __Flatten__
 
 The `flatten` filter takes a list with nested lists as items and returns a
 flattened list with all items at the top level. 
+
+__Group__
+
+The `group` filter takes a list of objects and groups them into buckets based
+on the value of a specified key. For example, if a list of objects all have a
+`category` parameter, the group filter would return a list of objects with
+`key` and `values` parameters. For example, given the following input:
+
+```
+[
+	{category: 'drawing', title: 'Untitled (Shoe)'},
+	{category: 'painting', title: 'Gold Marilyn'},
+	{category: 'sculpture', title: 'Brillo Box'},
+	{category: 'drawing', title: 'Roll of Bills'},
+	{category: 'painting', title: 'Flowers'},
+	{category: 'sculpture', title: 'Silver Clouds'},
+	{category: 'painting', title: 'Double Elvis'},
+	{category: 'photograph', title: 'Self-Portrait'}
+]
+```
+
+The filter `group('category')` would return the following output:
+
+```
+[
+	{key: 'drawing', values: [
+		{category: 'drawing', title: 'Untitled (Shoe)'},
+		{category: 'drawing', title: 'Roll of Bills'},
+	]},
+	{key: 'painting', values: [
+		{category: 'painting', title: 'Double Elvis'},
+		{category: 'painting', title: 'Flowers'},
+		{category: 'painting', title: 'Gold Marilyn'},
+	]},
+	{key: 'sculpture', values: [
+		{category: 'sculpture', title: 'Brillo Box'},
+		{category: 'sculpture', title: 'Silver Clouds'},
+	]},
+	{key: 'photograph', values: [
+		{category: 'photograph', title: 'Self-Portrait'}
+	]}
+]
+```
 
 __Join__
 
