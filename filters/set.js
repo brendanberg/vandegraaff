@@ -1,13 +1,17 @@
 module.exports = function(attr, value) {
     return function(data) {
-		if (typeof(value) === 'function') {
-			var computed = value.call(this, data);
+		var computed = undefined;
 
-			if (typeof(computed) !== 'undefined') {
-				data[attr] = computed;
-			}
+		if (typeof(value) === 'function') {
+			computed = value.call(this, data);
 		} else {
-			data[attr] = value;
+			computed = value;
+		}
+
+		if (computed === undefined) {
+			delete data[attr];
+		} else {
+			data[attr] = computed;
 		}
 
         return data;
