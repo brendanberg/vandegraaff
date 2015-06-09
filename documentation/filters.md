@@ -92,6 +92,37 @@ __Map__
 The `map` filter takes a filter as an argument and applies it to each value
 as it passes through the pipeline.
 
+__Set__
+
+The `set` filter sets a value for a property of an object. It takes two
+parameters, the property name and the value in the routes definition.
+
+If the value parameter is `undefined`, the `set` filter will remove the
+parameter from the object. If the value parameter is a function, the filter
+will set the parameter to the value returned by calling the function with
+the object being transformed as the only parameter.
+
+For example, consider the pipeline defined below:
+
+```
+[
+	set('email', 'brendan@example.org'),
+	set('age', function(data) { return (new Date()).getFullYear() - data.birthyear }),
+	set('birthyear', undefined)
+]
+```
+
+If the input to the pipeline were the object `{name: 'Brendan', birthyear: 1984}`,
+the output would be:
+
+```
+{
+	name: 'Brendan',
+	email: 'brendan@example.org',
+	age: 31
+}
+```
+
 __Split__
 
 The `split` filter is the opposite of `join`. It takes what would normally be
