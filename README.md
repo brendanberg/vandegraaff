@@ -7,7 +7,7 @@ generate and render page content.
 Van de Graaff was created by Brendan Berg and Ramsey Nasser for the Eyebeam
 Art + Technology Center and is made freely available to the public.
 
-[Documentation](http://brendanberg.github.io/vandegraaff/)
+[Documentation](documentation/)
 
 ## Installation
 
