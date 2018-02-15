@@ -27,7 +27,7 @@
     "grunt-prompt": "^1.1.0",
     "js-yaml": "~3.1.0",
     "marked": "~0.3.2",
-    "mustache": "~0.8.1",
+    "mustache": "~2.2.1",
     "sugar": "~1.4.1"
   }
 }
