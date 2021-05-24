@@ -1,4 +1,4 @@
-# Pipelnes
+# Pipelines
 
 Pipelines define a sequence of transformations for a site's data from source
 to output.
