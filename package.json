@@ -19,16 +19,14 @@
     }
   ],
   "devDependencies": {
-    "JSONSelect": "~0.4.0",
     "fs-extra": "~0.8.1",
-    "grunt": "^0.4.5",
-    "grunt-aws-s3": "^0.9.1",
+    "grunt": ">=1.4.0",
+    "grunt-aws-s3": "^2.0.2",
     "grunt-exec": "^0.4.6",
-    "grunt-prompt": "^1.1.0",
     "js-yaml": "^3.13.1",
-    "marked": "~0.3.2",
+    "JSONSelect": "~0.4.0",
+    "marked": ">=0.6.2",
     "mustache": "~2.2.1",
     "sugar": "~1.4.1"
-  },
-  "dependencies": {}
+  }
 }
