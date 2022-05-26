@@ -20,7 +20,7 @@
   ],
   "devDependencies": {
     "fs-extra": "~0.8.1",
-    "grunt": ">=1.4.0",
+    "grunt": ">=1.5.3",
     "grunt-aws-s3": "^2.0.2",
     "grunt-exec": "^0.4.6",
     "js-yaml": "^3.13.1",
