@@ -1,5 +1,5 @@
 {
-  "name": "Van de Graaff",
+  "name": "van-de-graaff",
   "description": "a static (website) generator written in JavaScript",
   "version": "0.1.0",
   "author": "Brendan Berg and Ramsey Nasser",
@@ -19,13 +19,14 @@
     }
   ],
   "devDependencies": {
+    "JSONSelect": "~0.4.0",
     "fs-extra": "~0.8.1",
-    "grunt-aws-s3": "^2.0.2",
+    "grunt-aws": "^0.7.1",
+    "grunt-contrib-connect": "^3.0.0",
     "grunt-exec": "^0.4.6",
     "js-yaml": "^3.13.1",
-    "JSONSelect": "~0.4.0",
-    "mustache": "~2.2.1",
-    "sugar": "~1.4.1"
+    "mustache": "^2.3.2",
+    "sugar": "^1.5.0"
   },
   "dependencies": {
     "grunt": "^1.5.3",
